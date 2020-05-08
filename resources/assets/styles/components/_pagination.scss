@@ -1,0 +1,27 @@
+.pagination {
+  padding: 35px 0;
+
+  a {
+    border: 1px solid $red;
+    margin: 0 5px;
+
+    @include btn--button($black, 0, relative, $transparent, 10px 15px);
+    @include font-source-sans(map-get($theme-font-sizes, "size-regular"), $black, map-get($theme-font-weight, "weight-normal"), 1, $secondary-font-family);
+  }
+
+  span.current {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid $red;
+
+    @include font-source-sans(map-get($theme-font-sizes, "size-regular"), $beuqie, map-get($theme-font-weight, "weight-normal"), 1, $secondary-font-family);
+  }
+
+  a:hover,
+  a:focus,
+  span.current {
+    color: $beuqie;
+    background-color: $red;
+    transition: 0.3s;
+  }
+}

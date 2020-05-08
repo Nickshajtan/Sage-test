@@ -1,0 +1,16 @@
+/** Import Bootstrap functions */
+
+@import "~bootstrap/scss/functions";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/font-sizes";
+@import "variables/font-weight";
+@import "variables/line-heights";

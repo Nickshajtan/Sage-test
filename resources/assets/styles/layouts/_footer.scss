@@ -1,0 +1,24 @@
+footer {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &#mastfooter {
+    padding: 20px 0;
+    height: 130px;
+
+    &.is-home {
+      background-color: $beuqie;
+    }
+
+    &:not(.is-home) {
+      background-color: $beuqie;
+      border-top: 1px solid $redly;
+    }
+
+    .copyright {
+      @include font-source-sans(map-get($theme-font-sizes, "size-regular"), $black, map-get($theme-font-weight, "weight-normal"), 1, $secondary-font-family);
+    }
+  }
+}

@@ -1,0 +1,73 @@
+/** Global styles & classes **/
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.img-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.m-auto {
+  @include push--auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.p0 {
+  padding: 0;
+}
+
+/** Position **/
+.p-absolute {
+  position: absolute;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-static {
+  position: static;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: sticky;
+}

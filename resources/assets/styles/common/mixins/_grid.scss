@@ -1,0 +1,119 @@
+// Grid display
+@mixin gridbox() {
+  display: -ms-grid;
+  display: grid;
+}
+
+// Inline grid display
+@mixin gridbox-inline() {
+  display: -ms-inline-grid;
+  display: inline-grid;
+}
+
+// Child grid container
+@mixin subgrid() {
+  display: subgrid;
+}
+
+// grid gap
+@mixin grid-gap($value-x, $value-y) {
+  gap: $value-x, $value-y;
+  grid-gap: $value-x, $value-y;
+  grid-row-gap: $value-x;
+  grid-column-gap: $value-y;
+}
+
+// The 'grid' shorthand
+// - applies to: grid items
+// <'grid-template'>, <'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?, [ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>,  auto, or none
+@mixin grid($values) {
+  grid: $values;
+}
+
+// The 'grid-start' shorthand
+// - applies to: grid items
+// <line name>, span <number>, span <name> or auto
+@mixin grid-start($row-start, $row-end, $column-start, $column-end) {
+  grid-row-start: $row-start;
+  grid-row-end: $row-end;
+  grid-column-start: $column-start;
+  grid-column-end: $column-end;
+}
+
+// The 'grid-auto-flow' shorthand
+// - applies to: grid items
+// <row>, <column>, <dense>
+@mixin grid-auto-flow($flow) {
+  grid-auto-flow: $flow;
+}
+// The 'grid-rows' & 'grid-columns' tracks shorthands auto sizes
+// - applies to: grid items
+// initial, unset, inherit, min-content, max-content, auto, fit-content, minmax, <px>, <fr>, <%>, <cm>, etc.
+// You can use repeat() function for values
+@mixin grid-sizes($rows, $columns) {
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+}
+
+// The 'grid-auto-rows' & 'grid-auto-columns' shorthands
+// - applies to: grid items
+// <positive-number>, <fr>, <%>, <name>, auto, or none
+// You can use repeat() function for values
+@mixin grid-auto-sizes($rows, $columns) {
+  grid-auto-rows: $rows;
+  grid-auto-columns: $columns;
+}
+
+// The 'grid-area' shorthand
+// - applies to: grid items
+// <custom-ident>, <integer> && <custom-ident>?, span && [ <integer> || <custom-ident> ], auto, or none
+// <name> or <row-start> / <column-start> / <row-end> / <column-end>;
+@mixin grid-area($values) {
+  grid-area: $values;
+}
+
+// Use 'grid-area' names for building cells
+// <'name 1', 'name 2', ... >, '.', none 
+// You can use repeat() function for values
+@mixin grid-template-areas($name) {
+  grid-template-areas: $name;
+}
+
+// Grid element position with X rows
+// <stretch>, <start>, <end>, <center>
+@mixin grid-justify-items($justify) {
+  justify-items: $justify;
+}
+
+// Grid element position with Y rows
+// <stretch>, <start>, <end>, <center>
+@mixin grid-align-items($align) {
+  align-items: $align;
+}
+
+// Grid element position with X column
+// <stretch>, <start>, <end>, <center>
+@mixin grid-justify-self($justify) {
+  justify-self: $justify;
+}
+
+// Grid element position with Y column
+// <stretch>, <start>, <end>, <center>
+@mixin grid-align-self($align) {
+  align-self: $align;
+}
+
+// Grid element content position with X of cell
+// <stretch>, <start>, <end>, <center>, <space-around>, <space-between>, <space-evenly>
+@mixin grid-justify-content($justify) {
+  -webkit-box-pack: $justify;
+  -ms-flex-pack: $justify;
+  justify-content: $justify;
+}
+
+// Grid element content position with Y of cell
+// <stretch>, <start>, <end>, <center>, <space-around>, <space-between>, <space-evenly>
+@mixin grid-align-content($align) {
+  -ms-flex-line-pack: $align;
+  align-content: $align;
+}

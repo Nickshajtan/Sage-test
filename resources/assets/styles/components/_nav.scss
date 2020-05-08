@@ -1,0 +1,60 @@
+nav {
+  &.menu-wrapper {
+    li {
+      a {
+        transition: 0.3s;
+        display: block;
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+
+        @include font-source-sans(map-get($theme-font-sizes, "size-middler"), $black, map-get($theme-font-weight, "weight-normal"), map-get($theme-line-heights, "line-middler"), $secondary-font-family);
+      }
+
+      &.current-menu-item a,
+      a:hover,
+      a:focus,
+      a.active {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+
+    &.nav-primary {
+      padding-top: 10px;
+
+      li.current-menu-item a,
+      li a.active {
+        &::after {
+          content: "";
+          display: block;
+          background-color: $red;
+          width: 9px;
+          height: 9px;
+          border-radius: 15px;
+          border: 1px solid $red;
+          position: relative;
+          top: 3px;
+
+          @include push--auto;
+        }
+      }
+
+      li a:hover,
+      li a:focus {
+        &::after {
+          content: "";
+          display: block;
+          background-color: $white;
+          width: 9px;
+          height: 9px;
+          border-radius: 15px;
+          border: 1px solid $red;
+          position: relative;
+          top: 3px;
+
+          @include push--auto;
+        }
+      }
+    }
+  }
+}

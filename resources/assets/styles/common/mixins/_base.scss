@@ -1,0 +1,57 @@
+//Margin-left & margin-right
+@mixin push--auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Pseudo elemets position
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//Placeholders
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//Z-index
+$z-indexes: (
+  //Your classes, for example
+  "outdated-browser",
+);
+
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  }
+
+  @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+
+    @return null;
+  }
+}
+
+//Split element
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

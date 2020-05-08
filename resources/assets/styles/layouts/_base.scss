@@ -1,0 +1,84 @@
+html,
+body {
+  background-color: $white;
+}
+
+main {
+  min-height: calc(100vh - 230px);
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  img {
+    max-width: 190px;
+    max-height: 65px;
+  }
+}
+
+/** Default headers **/
+
+$base-font-size: 18px;
+$heading-scale: 8;
+
+@for $i from 1 through 6 {
+  body h#{$i} {
+    font-family: $secondary-font-family;
+    font-size: $base-font-size + $heading-scale * (6 - $i);
+  }
+
+  aside h#{$i} {
+    font-size: $base-font-size + $heading-scale * (6 - $i*1.5);
+  }
+}
+
+/** Pages header block **/
+
+.page-header {
+  max-height: 180px;
+
+  @for $i from 1 through 6 {
+    & h#{$i} {
+      width: 100%;
+
+      &::after {
+        content: "";
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 30%;
+        background-color: $red;
+      }
+    }
+  }
+}
+
+/** Override Bootstrap container **/
+
+@media (min-width: 1250px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+@media screen and (min-width: 1299px) {
+  .container {
+    max-width: 1220px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@media screen and (min-width: 1566px) {
+  .container {
+    max-width: 1400px;
+  }
+}

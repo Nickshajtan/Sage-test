@@ -1,0 +1,23 @@
+// transform:rotate
+@mixin transform-rotate($deg) {
+  transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+}
+
+// transition
+@mixin transition($delay) {
+  -webkit-transition: all $delay ease-in-out;
+  -ms-transition: all $delay ease-in-out;
+  -moz-transition: all $delay ease-in-out;
+  transition: all $delay ease-in-out;
+}
+
+// Animate speed
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+
+  perspective: $perspective;
+}

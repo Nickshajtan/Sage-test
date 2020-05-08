@@ -1,0 +1,58 @@
+/** Colors Vars **/
+
+/** Colors **/
+$transparent: transparent;
+
+$beuqie: #fff8f8;
+$redly:  #b57474;
+
+$white: #fff;
+$dark: #2f333a;
+$black: #000;
+
+$blue: #14377d;
+$blue-info: #1d4dab;
+$blue-solitude: #ecf5fe;
+$blue-selago: #e3e8fb;
+$blue-pattens: #d7e4ff;
+
+$indigo: #6c48cb;
+$purple: #d9caff;
+$violet-selago: #e8dffa;
+$violet-fog: #d4c4ff;
+
+$green: #86c665;
+$green-hover: #78c152;
+$green-light: #d8f4cf;
+$green-dark: #5a9e44;
+
+$gray: #484d55;
+$gray-light: #8290ac;
+$gray-border: #2e3647;
+$border-light-gray: #afafaf;
+
+$red: #fb4c47;
+
+$orange: #e08215;
+$yellow: #e08215;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray,
+  success: $green-dark,
+  warnibg: $yellow,
+  info: $blue-info,
+  danger: $red,
+  dark: $dark,
+);
+
+/** Gradients **/
+$gradient-pink: linear-gradient(0deg, rgba(255, 255, 255, 0) -29.64%, $beuqie 45.66%, $redly 45.66%);
+$gradient-pink-light: linear-gradient(0deg, rgba(255, 255, 255, 0) -29.64%, $beuqie 45.66%, lighten($redly, 30%) 54.66%);
+$gradient-bg: linear-gradient(360deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);
+$gradient-violet: linear-gradient(262.07deg, $blue-pattens 0.95%, $purple 99.1%);
+$gradient-blue: linear-gradient(96.68deg, $blue-solitude 0.95%, $blue-selago 99.1%);
+
+$images-path: "../images";
+
+$breadcrumb-divider: quote("🡪");

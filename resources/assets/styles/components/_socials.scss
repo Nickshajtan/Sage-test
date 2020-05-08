@@ -1,0 +1,22 @@
+.socials {
+  list-style: none;
+
+  &.socials-footer {
+    li {
+      margin: 0 10px;
+
+      a {
+        @include font-source-sans(map-get($theme-font-sizes, "size-regular"), $blue, map-get($theme-font-weight, "weight-normal"), 1, $secondary-font-family);
+
+        &:hover,
+        &:focus {
+          &,
+          i {
+            color: $red;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

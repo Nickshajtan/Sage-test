@@ -1,0 +1,11 @@
+/** Fonts Vars **/
+
+$main-font-family: "Red Hat Display", sans-serif;
+$secondary-font-family: "Muli", sans-serif;
+$helper-font-family: "MuseoSansCyrl", sans-serif;
+
+$theme-fonts: (
+  main-font: $main-font-family,
+  secondary-font: $secondary-font-family,
+  helper-font: $helper-font-family,
+);

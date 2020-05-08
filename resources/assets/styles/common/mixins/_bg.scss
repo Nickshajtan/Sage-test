@@ -1,0 +1,26 @@
+//BG settings
+@mixin bg--auto($color, $image, $size, $repeat, $mode: overlay) {
+  background-color: $color;
+  background-image: $image;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-blend-mode: $mode;
+}
+
+//BG size
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote(( $y / $x ) * 100 + "%");
+
+  @if $pseudo {
+    &::before {
+      @include pseudo($pos: relative);
+
+      width: 100%;
+      padding-top: $padding;
+    }
+  }
+
+  @else {
+    padding-top: $padding;
+  }
+}

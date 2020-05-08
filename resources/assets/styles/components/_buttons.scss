@@ -1,0 +1,17 @@
+.bordered-btn {
+  display: block;
+  border: 2px solid $red;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+    color: $beuqie;
+    text-decoration: none;
+    box-shadow: 0 8px 87px rgba(0, 0, 0, 0.1);
+  }
+
+  @include btn--button($red, 46px, relative, $transparent, 16px 45px);
+  @include font-source-sans(map-get($theme-font-sizes, "size-middler"), $red, map-get($theme-font-weight, "weight-normal"), 1, $secondary-font-family);
+}

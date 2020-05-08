@@ -1,0 +1,47 @@
+.sidebar {
+  &.sidebar-left {
+    border-left: 1px solid $red;
+  }
+
+  &.sidebar-right {
+    border-right: 1px solid $red;
+  }
+
+  &.sidebar-column {
+    &:not(:last-child) {
+      .widget {
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 0;
+  }
+
+  a {
+    margin-bottom: 1rem;
+  }
+
+  a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: $red;
+    display: block;
+    position: relative;
+    top: 1px;
+  }
+
+  a:hover,
+  a:focus {
+    color: $red;
+    transition: 0.3s;
+
+    &::after {
+      width: 30%;
+      transition: width ease-out 0.3s;
+    }
+  }
+}

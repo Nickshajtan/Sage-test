@@ -1,0 +1,26 @@
+/** Base settings: margin, pseudo, placeholders, z-index, etc. **/
+@import "mixins/base";
+
+/** Fonts settings **/
+@import "mixins/fonts";
+
+/** Flexbox settings **/
+@import "mixins/flexbox";
+
+/** CSS grid settings **/
+@import "mixins/grid";
+
+/** Background settings **/
+@import "mixins/bg";
+
+/** Buttons settings **/
+@import "mixins/buttons";
+
+/** Settings for CSS figures splits **/
+@import "mixins/figures";
+
+/** Animate & effects settings **/
+@import "mixins/animate";
+
+/** Media settings **/
+@import "mixins/media";

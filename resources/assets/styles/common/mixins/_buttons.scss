@@ -1,0 +1,8 @@
+//Button rounded
+@mixin btn--button($color: inherit, $radius: 0, $position: relative, $bg-color: inherit, $padding : 0) {
+  color: $color;
+  border-radius: $radius;
+  position: $position;
+  background-color: $bg-color;
+  padding: $padding;
+}

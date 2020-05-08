@@ -1,0 +1,20 @@
+/** Grid displaying classes **/
+.d-grid {
+  display: grid;
+}
+
+$delay: 1fr;
+
+@for $i from 1 through 16 {
+  .grid-column-#{$i} {
+    grid-template-columns: repeat($i, $delay);
+  }
+}
+
+$delay: 1fr;
+
+@for $i from 1 through 16 {
+  .grid-row-#{$i} {
+    grid-template-rows: repeat($i, $delay);
+  }
+}
